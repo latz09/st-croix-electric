@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-light;
+}
+
+/* FORM */
+.form-container {
+  @apply grid gap-6 border lg:border-2 border-secondary shadow-lg px-6 py-12 bg-light
+}
+
+.form-label {
+  @apply text-sm font-semibold text-dark 
+}
+
+.form-input {
+  @apply w-full p-2 border border-primary rounded-md mt-2
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scroll {
+  overflow: hidden;
+}
