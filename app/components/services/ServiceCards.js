@@ -17,9 +17,9 @@ const ServiceCards = ({ data }) => {
 			{/* Cards container */}
 			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'>
 				{data.servicesList.map((service, index) => (
-					<AnimateUp>
+					<AnimateUp key={index}>
 						<div
-							key={index}
+							
 							className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none hover:scale-95 transition duration-1000 '
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
