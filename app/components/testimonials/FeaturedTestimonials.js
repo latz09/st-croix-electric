@@ -22,7 +22,7 @@ const FeaturedTestimonials = ({ data }) => {
 							className='bg-dark  shadow-lg shadow-primary/30 rounded-sm p-6 text-secondary flex flex-col justify-between gap-4'
 						>
 							<p className='text-lg italic  mb-4 '>{testimonial.testimonial}</p>
-							<p className='text-left font-bold'>- {testimonial.author}</p>
+							<p className='text-left font-bold text-light'>- {testimonial.author}</p>
 						</div>
 					</AnimateUp>
 				))}
