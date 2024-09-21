@@ -20,7 +20,7 @@ const ServiceCards = ({ data }) => {
 					<AnimateUp key={index}>
 						<div
 							
-							className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none hover:scale-95 transition duration-1000 '
+							className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none lg:hover:scale-95 transition duration-1000 '
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 							onClick={() => setHoveredIndex(index)} // For touch devices

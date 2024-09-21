@@ -43,8 +43,8 @@ const MobileNavbar = ({ navLinks }) => {
 										</span>
 									</Link>
 								))}
-								<div className='grid place-items-center pt-8' onClick={toggleNav}>
-									<Logo height={150} width={150} />
+								<div className='grid place-items-center pt-16' onClick={toggleNav}>
+									<Logo height={250} width={250} />
 								</div>
 							</nav>
 						</motion.div>
