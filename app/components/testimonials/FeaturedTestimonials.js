@@ -16,9 +16,9 @@ const FeaturedTestimonials = ({ data }) => {
 			{/* Testimonials Grid */}
 			<div className='grid grid-cols-1  lg:grid-cols-3 gap-8 mt-16 '>
 				{data.testimonialsList.map((testimonial, index) => (
-					<AnimateUp>
+					<AnimateUp key={index}>
 						<div
-							key={index}
+							
 							className='bg-dark  shadow-lg shadow-primary/30 rounded-sm p-6 text-secondary flex flex-col justify-between gap-4'
 						>
 							<p className='text-lg italic  mb-4 '>{testimonial.testimonial}</p>
