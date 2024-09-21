@@ -13,10 +13,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-	metadataBase: new URL('https://www.latzwebdesign.com/'),
+	metadataBase: new URL('https://st-croix-electric.vercel.app/'),
 	title: {
-		default: 'Starter - Latz Web Design',
-		template: `%s | Latz Web Design `,
+		default: 'St. Croix Electric',
+		template: `%s | St. Croix Electricgit add . `,
 	},
 	description: ``,
 	twitter: {
