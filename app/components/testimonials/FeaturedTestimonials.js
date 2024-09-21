@@ -27,7 +27,7 @@ const FeaturedTestimonials = ({ data }) => {
 					</AnimateUp>
 				))}
 			</div>
-			<div className=' grid place-items-center mt-12 '>
+			<div className=' grid place-items-center mt-24 '>
 				<button className='bg-secondary text-dark font-bold text-lg px-6 py-2 rounded-sm hover:bg-primary hover:text-light hover:scale-95 transition duration-700  w-5/6 lg:w-1/2 '>
 					View More Testimonials
 				</button>
