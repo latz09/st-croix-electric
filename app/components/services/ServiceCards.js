@@ -24,8 +24,8 @@ const ServiceCards = ({ data }) => {
 				<motion.div
 					className='absolute inset-0 -z-10 grid place-items-center'
 					animate={{
-						x: [0, 30, 50, 30, 0, -30, -50, -30, 0], // Adjusted values for a smaller circular motion
-						y: [0, 30, 0, -30, -50, -30, 0, 30, 0], // Adjusted values for a smaller circular motion
+						x: [0, 60, 100, 60, 0, -60, -100, -60, 0], // Adjusted values for a smaller circular motion
+						y: [0, 60, 0, -60, -100, -60, 0, 60, 0], // Adjusted values for a smaller circular motion
 					}}
 					transition={{
 						duration: 12, // Adjust the duration for a slower or faster motion
