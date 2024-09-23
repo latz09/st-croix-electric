@@ -1,19 +1,17 @@
 import Link from 'next/link';
 import Logo from '../lib/Logo';
-
+import { navigationLinks } from '@/data/navigationLinks';
 
 const currentYear = new Date().getFullYear();
 const CLIENT_BUSINESS_NAME = 'St. Croix Electric';
 
 const Footer = () => {
 	return (
-		<footer>
-            <div className="py-16 grid place-items-center ">
-                <Logo 
-                    height = {200}
-                    width = {200}
-                />
-            </div>
+		<footer className="pb-16 pt-36 grid place-items-center gap-12">
+			<div className=' grid place-items-center '>
+				<Logo height={200} width={200} />
+			</div>
+			<FooterLinks />
 			<CopyRight />
 		</footer>
 	);
@@ -23,10 +21,9 @@ export default Footer;
 
 const CopyRight = () => {
 	// Get the current year
-	
 
 	return (
-		<div className='text-center pb-24 mt-2 px-2  grid gap-3 text-dark'>
+		<div className='text-center py-12 mt-2 px-2  grid gap-3 text-dark'>
 			<Link href='/legal/privacy-policy'>
 				<span className='text-xs font-semibold'>Privacy Policy</span>
 			</Link>
@@ -41,6 +38,18 @@ const CopyRight = () => {
 					<span className='font-bold '>LatzWebDesign.</span>
 				</p>
 			</a>
+		</div>
+	);
+};
+
+const FooterLinks = () => {
+	return (
+		<div className="grid place-items-center gap-6 lg:flex lg:gap-16 ">
+			{navigationLinks.map((link, i) => (
+				<Link href={link.href} key={i}>
+					<span className='text-dark/80 font-bold hover:text-primary transiton duration-700 '>{link.title}</span>
+				</Link>
+			))}
 		</div>
 	);
 };
