@@ -17,7 +17,14 @@ const NavigationLinks = ({ navLinks }) => {
 		<div className='flex justify-around items-center  w-full '>
 			{navLinks.map((link, index) => (
 				<Link key={index} href={link.href} passHref>
-					<span className='block text-lg font-semibold text-dark hover:text-primary transition cursor-pointer'>
+					<span
+						className={`block text-lg font-semibold transition cursor-pointer py-2 px-8 
+				${
+					link.title === 'Contact Us'
+						? 'bg-primary text-light rounded-sm hover:bg-secondary hover:text-dark/80 hover:scale-105 transiton duration-300'
+						: 'text-dark hover:text-primary'
+				}`}
+					>
 						{link.title}
 					</span>
 				</Link>

@@ -17,7 +17,7 @@ export const navigationLinks = [
 		href: '/',
 	},
 	{
-		title: 'Contact',
+		title: 'Contact Us',
 		href: '/',
 	},
 ];

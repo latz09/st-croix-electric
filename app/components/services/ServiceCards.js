@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { FaRegHandPointer } from 'react-icons/fa';
 import AnimateUp from '../utils/animations/AnimateUp';
+import { motion } from 'framer-motion';
 
 const ServiceCards = ({ data }) => {
 	const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -19,7 +20,6 @@ const ServiceCards = ({ data }) => {
 				{data.servicesList.map((service, index) => (
 					<AnimateUp key={index}>
 						<div
-							
 							className='relative  group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none lg:hover:scale-95 transition duration-1000 '
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
@@ -48,13 +48,20 @@ const ServiceCards = ({ data }) => {
 
 							{/* Hover Text */}
 							{hoveredIndex === index && (
-								<div className='absolute inset-0 bg-dark/80 backdrop-blur-sm flex flex-col justify-center items-center text-light px-6 py-4 text-sm'>
-									<h3 className='text-xl lg:text-2xl font-bold mb-2 text-secondary'>
+								<div className='absolute inset-0 bg-dark/80 text-light backdrop-blur-sm flex flex-col items-cente gap-8 p-8 '>
+									<h3 className='text-2xl lg:text-3xl font-bold  text-secondary '>
 										{service.serviceName}
 									</h3>
 									<ul className='space-y-2 lg:text-lg font-bold'>
 										{service.hoverText.map((text, i) => (
-											<li key={i}>{text}</li>
+											<motion.li
+												key={i}
+												initial={{ x: 100, opacity: 0 }} // Start off-screen to the right
+												animate={{ x: 0, opacity: 1 }} // Move to the original position
+												transition={{ delay: i * 0.1, duration: 0.3 }} // Stagger each item
+											>
+												{text}
+											</motion.li>
 										))}
 									</ul>
 								</div>
