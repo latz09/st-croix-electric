@@ -48,7 +48,7 @@ const ServiceCards = ({ data }) => {
 
 							{/* Hover Text */}
 							{hoveredIndex === index && (
-								<div className='absolute inset-0 bg-dark/80 text-light backdrop-blur-sm flex flex-col items-cente gap-8 p-8 '>
+								<div className='absolute inset-0 bg-dark/80 text-light backdrop-blur-sm flex flex-col items-cente gap-4 lg:gap-8 p-4 lg:p-8 '>
 									<h3 className='text-2xl lg:text-3xl font-bold  text-secondary '>
 										{service.serviceName}
 									</h3>

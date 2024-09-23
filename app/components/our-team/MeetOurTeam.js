@@ -22,12 +22,12 @@ const MeetOurTeam = ({ data }) => {
 				<div className='absolute inset-0 '>
 					<div className=' gap-8 h-full group cursor-pointer '>
 						<div className=' text-light flex flex-col justify-between h-full px-6  lg:px-12 py-6'>
-							<h1 className='text-3xl md:text-4xl lg:text-5xl font-black text-cener text-secondary/80 group-hover:text-light '>
+							<h1 className='text-3xl md:text-4xl lg:text-5xl font-black text-cener text-secondary/80 lg:group-hover:text-light '>
 								{data.heading}
 							</h1>
 
 							<div className='grid gap-6 '>
-								<p className=' text-xl md:text-3xl  text-ceter leading-7 group-hover:text-secondary'>
+								<p className=' text-xl md:text-3xl  text-ceter leading-7 lg:group-hover:text-secondary'>
 									{data.teamParagraph}
 								</p>
 								<div className='flex items-center gap-4 text-xl lg:text-3xl text-secondary  place-self-center lg:place-self-end   '>
