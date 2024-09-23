@@ -23,7 +23,7 @@ const ServiceCards = ({ data }) => {
 				{/* Background Image */}
 				<motion.div
 					className='absolute inset-0 -z-10 grid place-items-center'
-					animate={{
+					whileInView={{
 						x: [0, 60, 100, 60, 0, -60, -100, -60, 0], // Adjusted values for a smaller circular motion
 						y: [0, 60, 0, -60, -100, -60, 0, 60, 0], // Adjusted values for a smaller circular motion
 					}}
@@ -31,6 +31,8 @@ const ServiceCards = ({ data }) => {
 						duration: 12, // Adjust the duration for a slower or faster motion
 						repeat: Infinity, // Keep the motion infinite
 						ease: 'linear', // Smooth and continuous motion
+						delay: 2
+						
 					}}
 				>
 					<Image
