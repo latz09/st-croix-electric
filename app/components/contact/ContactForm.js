@@ -8,7 +8,7 @@ const ContactForm = ({
 	handleFileUpload,
 }) => {
 	return (
-		<form onSubmit={handleSubmit} className='form-container font-semibold text-dark/80'>
+		<form onSubmit={handleSubmit} className='form-container font-semibold text-dark/80 '>
 			<h2 className="font-bold text-2xl text-dark">Tell Us How We Can Help</h2>
 			<h2>
 				Thank you for choosing St. Croix Electric Inc. Please provide as many

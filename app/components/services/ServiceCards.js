@@ -27,7 +27,7 @@ const ServiceCards = ({ data }) => {
 						>
 							{/* Service Image */}
 
-							<div className='relative w-full h-64 '>
+							<div className='relative w-full h-72 '>
 								<Image
 									src={service.imageUrl}
 									alt={service.serviceName}
@@ -65,7 +65,7 @@ const ServiceCards = ({ data }) => {
 			</div>
 			<div className='mt-24 grid place-items-center w-full'>
 				<button className='bg-secondary text-dark font-bold text-lg px-6 py-2 rounded-sm hover:bg-primary hover:text-light hover:scale-95 transition duration-700 w-5/6 lg:w-1/2'>
-					See All That We Offer
+					View All of Our Services
 				</button>
 			</div>
 		</div>

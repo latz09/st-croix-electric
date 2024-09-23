@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { FiPhone, FiMail } from 'react-icons/fi';
-import ModalOverlay from './ModalOverlay';
+import ModalOverlay, { QuoteModalOverlay } from './ModalOverlay';
 import SubmitContactForm from '../../contact/SubmitContactForm';
 
 const RequestQuoteNow = () => {
@@ -13,7 +13,7 @@ const RequestQuoteNow = () => {
 
 	return (
 		<>
-			<div className="bg-dark fixed bottom-0 left-0 right-0 z-50">
+			<div className='bg-dark fixed bottom-0 left-0 right-0 '>
 				<div className='max-w-3xl mx-auto  text-light flex justify-around gap-2 items-center p-4 shadow-lg  '>
 					<button
 						className='bg-secondary text-dark py-2 rounded-sm font-bold w-1/2 text-center'
@@ -36,19 +36,21 @@ const RequestQuoteNow = () => {
 			</div>
 
 			{/* Modal Overlay */}
-			<ModalOverlay isOpen={isOpen} onClose={handleClose}>
-				<div>
-					<SubmitContactForm />
-					<div className='grid place-items-center w-full'>
-						<button
-							className='mt-8 bg-primary w-1/2 text-light py-1 px-3 rounded-full font-semibold'
-							onClick={handleClose}
-						>
-							Close
-						</button>
+			<div className=''>
+				<QuoteModalOverlay isOpen={isOpen} onClose={handleClose}>
+					<div>
+						<SubmitContactForm />
+						<div className='grid place-items-center w-full'>
+							<button
+								className='mt-8 bg-primary w-1/2 text-light py-1 px-3 rounded-full font-semibold'
+								onClick={handleClose}
+							>
+								Close
+							</button>
+						</div>
 					</div>
-				</div>
-			</ModalOverlay>
+				</QuoteModalOverlay>
+			</div>
 		</>
 	);
 };

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import ModalOverlay from './ModalOverlay';
+import MobileNavbarModalOverlay from './ModalOverlay';
 import MenuIcon from '../../navigation/MenuIcon';
 import Logo from '../../lib/Logo';
 
@@ -21,11 +21,11 @@ const MobileNavbar = ({ navLinks }) => {
 				<MenuIcon toggleNav={toggleNav} isNavOpen={isNavOpen} />
 			</div>
 
-			<ModalOverlay isOpen={isNavOpen} onClose={toggleNav}>
+			<MobileNavbarModalOverlay isOpen={isNavOpen} onClose={toggleNav}>
 				<AnimatePresence>
 					{isNavOpen && (
 						<motion.div
-							className='fixed inset-y-0 right-0 bg-light w-full shadow-lg p-6 z-50'
+							className='fixed inset-y-0 right-0 bg-light z w-full shadow-lg p-6 z-40 '
 							initial={{ x: '100%' }}
 							animate={{ x: '0%' }}
 							exit={{ x: '100%' }}
@@ -50,7 +50,7 @@ const MobileNavbar = ({ navLinks }) => {
 						</motion.div>
 					)}
 				</AnimatePresence>
-			</ModalOverlay>
+			</MobileNavbarModalOverlay>
 		</div>
 	);
 };

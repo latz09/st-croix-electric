@@ -4,7 +4,7 @@ const LandingHero = ({ image, heading, subheading, blurb }) => {
   return (
     <div className="relative h-[60vh]">
       {/* Fullscreen background image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 ">
         <Image
           src={image}
           alt="Hero Background"
@@ -15,7 +15,7 @@ const LandingHero = ({ image, heading, subheading, blurb }) => {
       </div>
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-dark/70 z-10"></div>
+      <div className="absolute inset-0 bg-dark/70 "></div>
 
       {/* Heading and Subheading */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center text-light px-4 max-w-5xl mx-auto">

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const MenuIcon = ({ toggleNav, isNavOpen }) => {
 	return (
-		<button className=' z-[99999999] text-3xl text-dark' onClick={toggleNav}>
+		<button className=' z-40 text-3xl text-dark' onClick={toggleNav}>
 			<motion.div
 				className='cursor-pointer'
 				whileHover={{ scale: 1.1 }}
