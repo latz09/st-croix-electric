@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import MobileNavbarModalOverlay from './ModalOverlay';
@@ -14,6 +14,18 @@ const MobileNavbar = ({ navLinks }) => {
 		setNavOpen(!isNavOpen);
 	};
 
+	// Use useEffect to add/remove the 'no-scroll' class to the body element
+	useEffect(() => {
+		if (isNavOpen) {
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+		}
+		
+		// Cleanup when the component unmounts
+		return () => document.body.classList.remove('no-scroll');
+	}, [isNavOpen]);
+
 	return (
 		<div className='lg:hidden'>
 			<div className='flex items-center justify-between px-8'>
@@ -25,7 +37,7 @@ const MobileNavbar = ({ navLinks }) => {
 				<AnimatePresence>
 					{isNavOpen && (
 						<motion.div
-							className='fixed inset-y-0 right-0 bg-light z w-full shadow-lg p-6 z-40 '
+							className='fixed inset-y-0 right-0 bg-light z w-full shadow-lg p-6 z-40'
 							initial={{ x: '100%' }}
 							animate={{ x: '0%' }}
 							exit={{ x: '100%' }}

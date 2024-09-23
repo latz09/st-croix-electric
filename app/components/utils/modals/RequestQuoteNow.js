@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiPhone, FiMail } from 'react-icons/fi';
-import ModalOverlay, { QuoteModalOverlay } from './ModalOverlay';
+import  { QuoteModalOverlay } from './ModalOverlay';
 import SubmitContactForm from '../../contact/SubmitContactForm';
 
 const RequestQuoteNow = () => {
@@ -10,6 +10,18 @@ const RequestQuoteNow = () => {
 
 	const handleOpen = () => setIsOpen(true);
 	const handleClose = () => setIsOpen(false);
+
+	// Use useEffect to add/remove the 'no-scroll' class to the body element
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add('no-scroll');
+		} else {
+			document.body.classList.remove('no-scroll');
+		}
+		
+		// Cleanup when the component unmounts
+		return () => document.body.classList.remove('no-scroll');
+	}, [isOpen]);
 
 	return (
 		<>
@@ -25,10 +37,7 @@ const RequestQuoteNow = () => {
 						<a href='tel:+17153478887' className='flex items-center gap-2'>
 							<FiPhone className='text-secondary' />
 						</a>
-						<a
-							href='mailto:billy@nc715.com'
-							className='flex items-center gap-2'
-						>
+						<a href='mailto:billy@nc715.com' className='flex items-center gap-2'>
 							<FiMail className='text-secondary' />
 						</a>
 					</div>
