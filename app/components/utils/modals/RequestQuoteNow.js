@@ -36,7 +36,7 @@ const RequestQuoteNow = () => {
 			</div>
 
 			{/* Modal Overlay */}
-			<div className=''>
+			<div className='z-50'>
 				<QuoteModalOverlay isOpen={isOpen} onClose={handleClose}>
 					<div>
 						<SubmitContactForm />

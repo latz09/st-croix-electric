@@ -18,7 +18,7 @@ const HomePageIntro = ({ heading, intro, image }) => {
 						height={300}
 						className='w-3/4 lg:w-full mx-auto  rounded-b-sm '
 					/>
-					<div className='relative z-10 mt-4 text-sm text-gray-700 italic text-center p-2 '>
+					<div className='relative z-0 mt-4 text-sm text-gray-700 italic text-center p-2 '>
 						<p>Generations of expertise, passed down from father to son.</p>
 						<p>
 							St. Croix Electric, where family tradition meets modern

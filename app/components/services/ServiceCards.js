@@ -15,19 +15,19 @@ const ServiceCards = ({ data }) => {
 			</h1>
 
 			{/* Cards container */}
-			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'>
+			<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 '>
 				{data.servicesList.map((service, index) => (
 					<AnimateUp key={index}>
 						<div
 							
-							className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none lg:hover:scale-95 transition duration-1000 '
+							className='relative  group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer hover:shadow-none lg:hover:scale-95 transition duration-1000 '
 							onMouseEnter={() => setHoveredIndex(index)}
 							onMouseLeave={() => setHoveredIndex(null)}
 							onClick={() => setHoveredIndex(index)} // For touch devices
 						>
 							{/* Service Image */}
 
-							<div className='relative w-full h-72 '>
+							<div className='relative w-full h-72   '>
 								<Image
 									src={service.imageUrl}
 									alt={service.serviceName}

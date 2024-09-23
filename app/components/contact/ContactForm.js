@@ -299,7 +299,7 @@ const ContactForm = ({
 
 			<button
 				type='submit'
-				className={`bg-secondary text-dark py-2 transition duration-700 text-xl shadow font-bold rounded w-1/2 mx-auto ${
+				className={`bg-secondary text-dark py-2 transition duration-700 text-xl shadow font-bold rounded w-full lg:w-1/2 mx-auto ${
 					isLoading ? 'opacity-50 cursor-not-allowed' : ''
 				}`}
 				disabled={isLoading}
