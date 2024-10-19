@@ -16,7 +16,7 @@ export const metadata = {
 	metadataBase: new URL('https://st-croix-electric.vercel.app/'),
 	title: {
 		default: 'St. Croix Electric',
-		template: `%s | St. Croix Electricgit add . `,
+		template: `%s | St. Croix Electric inc. `,
 	},
 	description: ``,
 	twitter: {

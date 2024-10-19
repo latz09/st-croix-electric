@@ -2,22 +2,22 @@ export const navigationLinks = [
 
 	{
 		title: 'What We Do',
-		href: '/',
+		href: '/what-we-do',
 	},
 	{
 		title: 'Meet the Team',
-		href: '/',
+		href: '/meet-the-team',
 	},
 	{
 		title: 'See Our Work',
-		href: '/',
+		href: '/see-our-work',
 	},
 	{
 		title: 'Why Choose Us',
-		href: '/',
+		href: '/why-choose-us',
 	},
 	{
 		title: 'Contact Us',
-		href: '/',
+		href: '/contact-us',
 	},
 ];

@@ -1,14 +1,24 @@
+import { fetchContent } from '@/utils/cms/fetchContent';
+import { FETCH_WHO_WE_ARE_CARD_DATA as query } from '@/data/queries/who-we-are-card/FETCH_WHO_WE_ARE_CARD_DATA';
 import Image from 'next/image';
-import { FaArrowRight } from 'react-icons/fa6';
 
-const MeetOurTeam = ({ data }) => {
+import {
+	Heading,
+	ParagraphLarge,
+	SubHeading,
+} from '../utils/typography/Typography';
+import { SecondaryButtonLink } from '../utils/buttons/Buttons';
+
+const MeetOurTeam = async () => {
+	const [data] = await fetchContent(query);
+	
 	return (
 		<div className='relative w-full'>
 			{/* Background image */}
 
 			<div className='relative w-full h-[60vh] lg:h-[70vh] max-w-5xl mx-auto '>
 				<Image
-					src={data.teamImageUrl}
+					src={data.whoWeAreCard.image.asset.url}
 					alt='Team Image'
 					fill
 					sizes='100vw'
@@ -22,18 +32,18 @@ const MeetOurTeam = ({ data }) => {
 				<div className='absolute inset-0 '>
 					<div className=' gap-8 h-full group cursor-pointer '>
 						<div className=' text-light flex flex-col justify-between h-full px-6  lg:px-12 py-6'>
-							<h1 className='text-3xl md:text-4xl lg:text-5xl font-black text-cener text-secondary/80 lg:group-hover:text-light '>
-								{data.heading}
-							</h1>
+							<Heading type='secondary' text={data.heading} />
 
 							<div className='grid gap-6 '>
-								<p className=' text-xl md:text-3xl  text-ceter leading-7 lg:group-hover:text-secondary'>
-									{data.teamParagraph}
-								</p>
-								<div className='flex items-center gap-4 text-xl lg:text-3xl text-secondary  place-self-center lg:place-self-end   '>
-									<span>Meet Our Team</span>
-									<div className="lg:group-hover:translate-x-4  transition duration-300">
-									<FaArrowRight /></div>
+								<div className='lg:group-hover:text-secondary'>
+									<ParagraphLarge text={data.whoWeAreCard.teamParagraph} type='secondary' />
+								</div>
+
+								<div className='place-self-center lg:place-self-end '>
+									<SecondaryButtonLink
+										title='Meet Our Team'
+										href='/meet-the-team'
+									/>
 								</div>
 							</div>
 						</div>
@@ -45,3 +55,6 @@ const MeetOurTeam = ({ data }) => {
 };
 
 export default MeetOurTeam;
+
+
+export const revalidate = 10;

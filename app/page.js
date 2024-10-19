@@ -7,6 +7,7 @@ import ServiceCards from './components/services/ServiceCards';
 import FeaturedTestimonials from './components/testimonials/FeaturedTestimonials';
 import MeetOurTeam from './components/our-team/MeetOurTeam';
 import AnimateUp from './components/utils/animations/AnimateUp';
+import ServiceCardsContainer from './components/services/ServiceCardsContainer';
 
 export default async function Home() {
 	const [data] = await fetchContent(query);
@@ -26,7 +27,8 @@ export default async function Home() {
 					image={data.intro.introImageUrl}
 				/>
 			</AnimateUp>
-			<ServiceCards data={data.services} />
+			{/* <ServiceCards data={data.services} /> */}
+			<ServiceCardsContainer />
 			<FeaturedTestimonials data={data.testimonials} />
 			<MeetOurTeam data={data.meetOurTeam} />
 		</PageContainer>
@@ -35,4 +37,4 @@ export default async function Home() {
 
 // Animations,
 
-export const revalidate = 1;
+export const revalidate = 10;
