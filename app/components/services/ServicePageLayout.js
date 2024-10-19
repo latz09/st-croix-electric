@@ -9,7 +9,7 @@ const ServicePageLayout = ({ data }) => {
 		<div className='grid gap-16 lg:gap-24'>
 			{data.servicesList &&
 				data.servicesList.map((service, index) => (
-					<div id={`${service.pageId}`} className='scroll-mt-6 border-t-2 border-dark/10' key={index}>
+					<div id={`${service.pageId}`} className='scroll-mt-6 lg:border-t-2 border-dark/10' key={index}>
 						<motion.div
 							className='overflow-hidden '
 							initial={{ opacity: 0, y: 150, scale: 1 }}
