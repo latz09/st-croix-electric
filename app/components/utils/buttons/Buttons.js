@@ -17,20 +17,21 @@ export const PrimaryButtonLink = ({ title, href, type, width = 'w-full' }) => {
 	);
 };
 
-export const SecondaryButtonLink = ({
-	title,
-	href,
-	type,
-	width = 'w-full',
-}) => {
+
+export const SecondaryButtonLink = ({ title, href, type, width = 'w-full' }) => {
 	return (
-		<Link href={href}>
-			<div className='flex items-center gap-4 text-xl lg:text-3xl text-secondary    '>
-				<span>{title}</span>
-				<div className='lg:group-hover:translate-x-4  transition duration-300'>
-					<FaArrowRight />
-				</div>
-			</div>
-		</Link>
+	  <Link href={href}>
+		<div
+		  className={`flex items-center gap-4 text-xl lg:text-3xl group ${
+			type === 'secondary' ? 'text-primary' : 'text-secondary'
+		  }`}
+		>
+		  <span>{title}</span>
+		  <div className='transition-transform duration-300 transform group-hover:translate-x-4'>
+			<FaArrowRight />
+		  </div>
+		</div>
+	  </Link>
 	);
-};
+  };
+

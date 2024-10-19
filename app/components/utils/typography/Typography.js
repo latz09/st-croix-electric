@@ -37,7 +37,7 @@ export const Paragraph = ({ text, type }) => {
 export const ParagraphLarge = ({ text, type }) => {
     return (
         <p
-            className={`text-xl md:text-3xl leading-7 lg:leading-9 ${
+            className={`text-xl md:text-3xl leading-7 lg:leading-10 ${
                 type === 'primary' ? 'text-dark' : 'text-light'
             }`}
         >

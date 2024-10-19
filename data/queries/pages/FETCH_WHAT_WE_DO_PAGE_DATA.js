@@ -3,12 +3,17 @@ export const FETCH_WHAT_WE_DO_PAGE_DATA = `
   title,
   servicesList[] {
     title,
-    image,
+     image {
+      asset->{
+        url
+      }
+    },
     description,
     subcategories[] {
       subTitle,
       subDescription
-    }
+    },
+    pageId
   }
 }
 
