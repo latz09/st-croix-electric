@@ -21,10 +21,7 @@ const WhatWeDoPage = async () => {
 	return (
 		<div className="bg-gradient-to-b from-light via-secondary/5 to-light">
 			<div className=' py-12 max-w-7xl mx-auto '>
-				{/* Page Title */}
-				<div className='text-center mb-12'>
-					<Heading text={data.title || 'Our Services'} type='primary' />
-				</div>
+			
 
 				{/* Services List */}
 				<ServicePageLayout data={data} />
