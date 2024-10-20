@@ -29,7 +29,7 @@ export default async function Home() {
 			</AnimateUp>
 			{/* <ServiceCards data={data.services} /> */}
 			<ServiceCardsContainer />
-			<FeaturedTestimonials data={data.testimonials} />
+			<FeaturedTestimonials  />
 			<MeetOurTeam data={data.meetOurTeam} />
 		</PageContainer>
 	);
