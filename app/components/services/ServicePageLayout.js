@@ -9,7 +9,11 @@ const ServicePageLayout = ({ data }) => {
 		<div className='grid gap-16 lg:gap-24'>
 			{data.servicesList &&
 				data.servicesList.map((service, index) => (
-					<div id={`${service.pageId}`} className='scroll-mt-6 lg:border-t-2 border-dark/10' key={index}>
+					<div
+						id={`${service.pageId}`}
+						className='scroll-mt-6 lg:border-t-2 border-dark/10'
+						key={index}
+					>
 						<motion.div
 							className='overflow-hidden '
 							initial={{ opacity: 0, y: 150, scale: 1 }}
@@ -33,6 +37,14 @@ const ServicePageLayout = ({ data }) => {
 								<Subcategories subcategories={service.subcategories} />
 							)}
 						</motion.div>
+						<div className='lg:hidden mt-8 grid place-items-center lg:place-items-stat'>
+							<SecondaryButtonLink
+								title='Request a Quote Now'
+								type='secondary'
+								href='/'
+								width='w-1/2'
+							/>
+						</div>
 					</div>
 				))}
 		</div>
@@ -70,8 +82,13 @@ const OverlayContent = ({ title, description }) => (
 		</div>
 
 		{/* Call to Action Button */}
-		<div className="mt-8 grid place-items-center lg:place-items-start">
-			<SecondaryButtonLink title='Request a Quote Now' type='secondary' href='/' width='w-1/2' />
+		<div className='hidden lg:grid mt-8 place-items-center lg:place-items-start'>
+			<SecondaryButtonLink
+				title='Request a Quote Now'
+				type='secondary'
+				href='/'
+				width='w-1/2'
+			/>
 		</div>
 	</div>
 );
