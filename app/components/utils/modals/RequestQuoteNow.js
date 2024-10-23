@@ -5,7 +5,9 @@ import { FiPhone, FiMail } from 'react-icons/fi';
 import { QuoteModalOverlay } from './ModalOverlay';
 import SubmitContactForm from '../../contact/SubmitContactForm';
 
-const RequestQuoteNow = () => {
+
+const RequestQuoteNow = async () => {
+	
 	const [isOpen, setIsOpen] = useState(false);
 
 	const handleOpen = () => setIsOpen(true);
@@ -68,3 +70,5 @@ const RequestQuoteNow = () => {
 };
 
 export default RequestQuoteNow;
+
+export const revalidate = 10;
