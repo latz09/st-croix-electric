@@ -41,7 +41,7 @@ const ServicePageLayout = ({ data }) => {
 							<SecondaryButtonLink
 								title='Request a Quote Now'
 								type='secondary'
-								href='/'
+								href='/contact-us'
 								width='w-1/2'
 							/>
 						</div>
@@ -86,7 +86,7 @@ const OverlayContent = ({ title, description }) => (
 			<SecondaryButtonLink
 				title='Request a Quote Now'
 				type='secondary'
-				href='/'
+				href='/contact-us'
 				width='w-1/2'
 			/>
 		</div>
