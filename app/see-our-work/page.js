@@ -13,7 +13,7 @@ const SeeOurWorkPage = async () => {
 	const [data] = await fetchContent(query);
 	
 	return (
-		<div className='max-w-7xl mx-auto space-y-12 pt-12 text-center'>
+		<div className='max-w-7xl mx-auto space-y-12 pt-12 text-center '>
 			
 			<Heading 
 				text={data.title}
