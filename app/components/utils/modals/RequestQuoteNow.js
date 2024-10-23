@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import { useState, useEffect } from 'react';
 import { FiPhone, FiMail } from 'react-icons/fi';
-import  { QuoteModalOverlay } from './ModalOverlay';
+import { QuoteModalOverlay } from './ModalOverlay';
 import SubmitContactForm from '../../contact/SubmitContactForm';
 
 const RequestQuoteNow = () => {
@@ -18,14 +18,14 @@ const RequestQuoteNow = () => {
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
-		
+
 		// Cleanup when the component unmounts
 		return () => document.body.classList.remove('no-scroll');
 	}, [isOpen]);
 
 	return (
 		<>
-			<div className='bg-dark fixed bottom-0 left-0 right-0 '>
+			<div className='bg-dark fixed bottom-0 left-0 right-0 z-50'>
 				<div className='max-w-3xl mx-auto  text-light flex justify-around gap-2 items-center p-4 shadow-lg  '>
 					<button
 						className='bg-secondary text-dark py-2 rounded-sm font-bold w-1/2 text-center'
@@ -34,10 +34,13 @@ const RequestQuoteNow = () => {
 						Request Quote
 					</button>
 					<div className='w-1/2 flex justify-around text-3xl'>
-						<a href='tel:+17153478887' className='flex items-center gap-2'>
+						<a href='tel:+6124309156' className='flex items-center gap-2'>
 							<FiPhone className='text-secondary' />
 						</a>
-						<a href='mailto:billy@nc715.com' className='flex items-center gap-2'>
+						<a
+							href='mailto:stcroixelectricinc@gmail.com'
+							className='flex items-center gap-2'
+						>
 							<FiMail className='text-secondary' />
 						</a>
 					</div>
