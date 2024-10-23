@@ -62,42 +62,44 @@ const ImageGallery = ({ data }) => {
 
 			{/* Modal */}
 			<AnimatePresence>
-				{selectedImage && (
-					<motion.div
-						className='fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-dark via-dark/50 to-dark backdrop-blur'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						onClick={closeModal}
-					>
+				<div>
+					{selectedImage && (
 						<motion.div
-							className='relative w-full h-full max-w-4xl max-h-[90vh] p-4'
-							initial={{ scale: 0.8, opacity: 0 }}
-							animate={{ scale: 1, opacity: 1 }}
-							exit={{ scale: 0.8, opacity: 0 }}
-							transition={{ duration: 0.3 }}
-							onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+							className='fixed inset-0 z-50 h-full flex items-center justify-center bg-gradient-to-b from-dark via-dark/50 to-dark backdrop-blur '
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							onClick={closeModal}
 						>
-							<Image
-								src={selectedImage.imageUrl}
-								alt={selectedImage.alt || 'Full-size Image'}
-								fill
-								quality={100}
-								className='object-contain '
-								style={{ maxHeight: '100%', maxWidth: '100%' }}
-							/>
-							{/* Close Button */}
-							<button
-								className='absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full '
-								onClick={closeModal}
+							<motion.div
+								className='relative w-full h-full max-w-4xl max-h-[90vh] '
+								initial={{ scale: 0.8, opacity: 0 }}
+								animate={{ scale: 1, opacity: 1 }}
+								exit={{ scale: 0.8, opacity: 0 }}
+								transition={{ duration: 0.3 }}
+								onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
 							>
-                                <div className="w-full grid place-items-center py-2">
-								<FaArrowAltCircleLeft className='text-4xl text-secondary' /></div>
-								
-							</button>
+								<Image
+									src={selectedImage.imageUrl}
+									alt={selectedImage.alt || 'Full-size Image'}
+									fill
+									quality={100}
+									className='object-contain '
+									style={{ maxHeight: '100%', maxWidth: '100%' }}
+								/>
+								{/* Close Button */}
+								<button
+									className='absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full '
+									onClick={closeModal}
+								>
+									<div className='w-full grid place-items-center py-2'>
+										<FaArrowAltCircleLeft className='text-4xl text-secondary' />
+									</div>
+								</button>
+							</motion.div>
 						</motion.div>
-					</motion.div>
-				)}
+					)}
+				</div>
 			</AnimatePresence>
 		</>
 	);
