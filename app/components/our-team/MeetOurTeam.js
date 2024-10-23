@@ -16,7 +16,7 @@ const MeetOurTeam = async () => {
 		<div className='relative w-full'>
 			{/* Background image */}
 
-			<div className='relative w-full h-[60vh] lg:h-[70vh] max-w-5xl mx-auto '>
+			<div className='relative w-full h-[70vh] max-w-5xl mx-auto '>
 				<Image
 					src={data.whoWeAreCard.image.asset.url}
 					alt='Team Image'
