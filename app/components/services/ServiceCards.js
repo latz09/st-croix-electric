@@ -99,7 +99,7 @@ const ServiceCard = ({ service }) => {
 
 				{/* Service Name */}
 				<div
-					className={`absolute bottom-0 left-0 right-0 p-4 text-center bg-dark/90 ${
+					className={`absolute bottom-0 left-0 right-0 px-2 py-4 text-center bg-dark/90 ${
 						isHovered ? 'opacity-30' : 'opacity-100'
 					}`}
 				>
@@ -148,9 +148,10 @@ const HoverContent = ({ service }) => (
 						className='mb-2'
 					>
 						<h3 className='font-bold text-lg'>{sub.subTitle}</h3>
-						{sub.subDescription && <p>{sub.subDescription}</p>}
 					</motion.div>
 				))}
+				{/* Add "and more" after listing all subcategories */}
+				<div className='mt-2 font-bold text-lg'>and more</div>
 			</div>
 		)}
 	</div>
