@@ -3,17 +3,17 @@ import { FaTiktok, FaFacebookF, FaSquareInstagram } from 'react-icons/fa6';
 const socialMediaLinks = [
 	{
 		name: 'Facebook',
-		url: 'https://www.facebook.com/your-profile',
+		url: 'https://www.facebook.com/stcroixelectric/',
 		icon: <FaFacebookF />,
 	},
 	{
 		name: 'Tiktok',
-		url: 'https://www.tiktok.com/your-profile',
+		url: 'https://www.tiktok.com/@stcroixelectric',
 		icon: <FaTiktok />,
 	},
 	{
 		name: 'Instagram',
-		url: 'https://www.instagram.com/your-profile',
+		url: 'https://www.instagram.com/stcroixelectricinc/',
 		icon: <FaSquareInstagram />,
 	},
 ];
