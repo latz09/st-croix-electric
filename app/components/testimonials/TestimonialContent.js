@@ -1,7 +1,6 @@
-// TestimonialContent.jsx
+
 import { useState } from 'react';
 import { Paragraph } from '../utils/typography/Typography';
-import { motion } from 'framer-motion';
 
 const TestimonialContent = ({ content }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -16,17 +15,10 @@ const TestimonialContent = ({ content }) => {
 
   return (
     <>
-      <motion.div
-        layout
-        initial={false}
-        style={{ overflow: 'hidden' }}
-        transition={{ duration: 0.5 }}
-      >
-        <Paragraph
-          text={`"${displayedText}${!isExpanded && isLongText ? '...' : ''}"`}
-          type="primary"
-        />
-      </motion.div>
+      <Paragraph
+        text={`"${displayedText}${!isExpanded && isLongText ? '...' : ''}"`}
+        type="primary"
+      />
       {isLongText && (
         <button
           onClick={toggleExpand}
