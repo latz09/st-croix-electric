@@ -30,7 +30,7 @@ const MobileNavbar = ({ navLinks }) => {
 	return (
 		<div className='lg:hidden'>
 			<div className='flex items-center justify-between px-8'>
-				<Logo height={125} width={125} />
+				<Logo height={100} width={100} />
 				<MenuIcon toggleNav={toggleNav} isNavOpen={isNavOpen} />
 			</div>
 
