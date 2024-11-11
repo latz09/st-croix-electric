@@ -7,7 +7,7 @@ import TestimonialContent from './TestimonialContent';
 
 const TestimonialsList = ({ testimonials }) => {
 	return (
-		<div className='grid gap-x-12 gap-y-32 sm:grid-cols-1 lg:grid-cols-2 pt-12 items-center'>
+		<div className='grid gap-x-12 gap-y-12 lg:gap-y-32 sm:grid-cols-1 lg:grid-cols-2 pt-12 items-center'>
 			{testimonials.map((testimonial, index) => (
 				<AnimateUp key={index}>
 					<div className='flex flex-col justify-between shadow-lg shadow-dark/30 w-full border border-dark/20'>
