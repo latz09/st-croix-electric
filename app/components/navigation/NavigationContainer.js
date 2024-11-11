@@ -3,9 +3,13 @@ import DesktopNavbar from './DesktopNavbar';
 import { navigationLinks } from '@/data/navigationLinks';
 const NavigationContainer = () => {
 	return (
-		<div className='  py-2 '>
-			<MobileNavbar navLinks={navigationLinks}/>
-			<DesktopNavbar navLinks={navigationLinks}/>
+		<div className=' '>
+			<div className=' fixed w-full bg-light  py-2 '>
+				<MobileNavbar navLinks={navigationLinks} />
+			</div>
+			<div className=' fixed w-full bg-light  py-2 '>
+				<DesktopNavbar navLinks={navigationLinks} />
+			</div>
 		</div>
 	);
 };

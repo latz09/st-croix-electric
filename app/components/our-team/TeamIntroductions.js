@@ -43,6 +43,7 @@ const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 				width={300}
 				height={300}
 				className='lg:w-1/3 lg:p-2 shadow-xl lg:rounded-sm bg-dark/80'
+                priority
 			/>
 
 			{/* Team Member Details */}
