@@ -20,7 +20,7 @@ const socialMediaLinks = [
 
 const SocialLinks = () => {
 	return (
-		<div className="flex space-x-8">
+		<div className="flex space-x-16">
 			{socialMediaLinks.map((link) => (
 				<a
 					key={link.name}

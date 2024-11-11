@@ -13,9 +13,9 @@ const Footer = () => {
 				<Logo height={200} width={200} />
 			</div>
 			<FooterLinks />
-			<div className="grid place-items-center gap-4 group">
+			<div className="grid place-items-center ">
 				<SocialLinks />
-				<p className="font-bold opacity-90 text-lg group-hover:text-primary transition duration-1000">Follow Us</p>
+				
 			</div>
 			<CopyRight />
 		</footer>
