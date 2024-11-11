@@ -30,7 +30,8 @@ export default async function Home() {
 			{/* <ServiceCards data={data.services} /> */}
 			<ServiceCardsContainer />
 			<FeaturedTestimonials  />
-			<MeetOurTeam data={data.meetOurTeam} />
+			<div className="border bg-[#191717]">
+			<MeetOurTeam data={data.meetOurTeam} /></div>
 		</PageContainer>
 	);
 }

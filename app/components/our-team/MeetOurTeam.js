@@ -22,7 +22,7 @@ const MeetOurTeam = async () => {
 					alt='Team Image'
 					fill
 					sizes='100vw'
-					className='object-cover object-to'
+					className='object-cover object-to '
 				/>
 
 				{/* Overlay for darkening the background image */}
@@ -41,7 +41,7 @@ const MeetOurTeam = async () => {
 
 								<div className='place-self-center lg:place-self-end '>
 									<SecondaryButtonLink
-										title='Meet Our Team'
+										title='Meet The Team'
 										href='/meet-the-team'
 									/>
 								</div>

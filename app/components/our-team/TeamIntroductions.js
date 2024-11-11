@@ -5,7 +5,7 @@ import FadeIn from '../utils/animations/FadeIn';
 
 const TeamIntroductions = ({ data }) => {
 	return (
-		<div className='grid place-items-center gap-24'>
+		<div className='grid place-items-center gap-24 '>
 			{data.map((member, index) => (
 				<AnimateUp key={index}>
 					<TeamMember
@@ -26,7 +26,7 @@ export default TeamIntroductions;
 const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 	return (
 		<div
-			className={`grid place-items-center lg:flex gap-4 lg:gap-16 items-center ${
+			className={` grid place-items-center lg:flex gap-4 lg:gap-16 items-center ${
 				reverseLayout ? 'lg:flex-row-reverse' : ''
 			}`}
 		>
@@ -53,7 +53,7 @@ const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 					<SubHeading text={role} type='primary' />
 				</div>
 				{/* Description */}
-				<div className='space-y-2 px-4 lg:px-0 text-center lg:text-start pt-4 lg:pt-0'>
+				<div className=' space-y-2 px-4 lg:px-0 text-center lg:text-start pt-4 lg:pt-0'>
 					{description.map((desc, idx) => (
 						<FadeIn key={idx}>
 							<Paragraph text={desc} type='primary' />
