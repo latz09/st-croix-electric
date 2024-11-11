@@ -20,9 +20,18 @@ const ServiceCards = ({ data }) => {
 			<div className='relative overflow-hidden'>
 				<BackgroundImage />
 
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-8 gap-x-4'>
 					{data.servicesList.map((service, index) => (
-						<ServiceCard key={index} service={service} />
+						<div
+							key={index}
+							className={`${
+								data.servicesList.length === 5 && index === 4
+									? 'sm:col-span-2 sm:w-1/2 sm:mx-auto'
+									: ''
+							}`}
+						>
+							<ServiceCard service={service} />
+						</div>
 					))}
 				</div>
 			</div>

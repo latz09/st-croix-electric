@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { AltText, Heading, Paragraph } from '../utils/typography/Typography';
 import { PrimaryButtonLink } from '../utils/buttons/Buttons';
+import SocialLinks from '../lib/SocialLinks';
 
 const HomePageIntro = ({ heading, intro, image }) => {
 	return (
@@ -10,6 +11,9 @@ const HomePageIntro = ({ heading, intro, image }) => {
 					<Heading type='primary' text={heading} />
 
 					<Paragraph text={intro} type='primary' />
+					<div className="pt-4 grid place-items-center lg:place-items-start">
+						<SocialLinks />
+					</div>
 				</div>
 				<div className='lg:col-span-2'>
 					<Image
@@ -21,7 +25,7 @@ const HomePageIntro = ({ heading, intro, image }) => {
 					/>
 					<div className='relative z-0 mt-4  text-center p-2 space-y-2 '>
 						<AltText
-							text='Generations of expertise, passed down from father to son'
+							text='Generations of expertise, passed down from father to son.'
 							type='primary'
 						/>
 						<AltText

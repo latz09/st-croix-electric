@@ -10,7 +10,7 @@ const FeaturedTestimonials = async () => {
 	return (
 		<div className='max-w-7xl mx-auto py-12 px-4'>
 			{/* Heading and Intro */}
-			<div className='text-center space-y-4'>
+			<div className='text-center space-y-4 max-w-5xl mx-auto'>
 				<Heading type='primary' text={data.heading} />
 
 				<Paragraph text={data.intro} type='primary' />

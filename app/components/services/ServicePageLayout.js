@@ -98,7 +98,12 @@ const Subcategories = ({ subcategories }) => (
 	<div className='mt-6 p-8'>
 		<div className='grid lg:grid-cols-2 gap-8'>
 			{subcategories.map((sub, subIndex) => (
-				<div key={subIndex} className='grid gap-2'>
+				<div
+					key={subIndex}
+					className={`grid gap-2 ${
+						subcategories.length === 5 && subIndex === 4 ? 'lg:col-span-2 lg:w-3/4 lg:mx-auto lg:text-center' : ''
+					}`}
+				>
 					<SubHeading text={sub.subTitle} type='primary' />
 					<Paragraph text={sub.subDescription} type='primary' />
 				</div>

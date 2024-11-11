@@ -6,6 +6,7 @@ import Link from 'next/link';
 import MobileNavbarModalOverlay from './ModalOverlay';
 import MenuIcon from '../../navigation/MenuIcon';
 import Logo from '../../lib/Logo';
+import SocialLinks from '../../lib/SocialLinks';
 
 const MobileNavbar = ({ navLinks }) => {
 	const [isNavOpen, setNavOpen] = useState(false);
@@ -21,7 +22,7 @@ const MobileNavbar = ({ navLinks }) => {
 		} else {
 			document.body.classList.remove('no-scroll');
 		}
-		
+
 		// Cleanup when the component unmounts
 		return () => document.body.classList.remove('no-scroll');
 	}, [isNavOpen]);
@@ -55,8 +56,11 @@ const MobileNavbar = ({ navLinks }) => {
 										</span>
 									</Link>
 								))}
-								<div className='grid place-items-center pt-16' onClick={toggleNav}>
+								{/* <div className='grid place-items-center pt-16' onClick={toggleNav}>
 									<Logo height={225} width={225} />
+								</div> */}
+								<div className='pt-16 grid place-items-center'>
+									<SocialLinks />
 								</div>
 							</nav>
 						</motion.div>
