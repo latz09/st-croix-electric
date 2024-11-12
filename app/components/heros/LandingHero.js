@@ -23,7 +23,7 @@ const LandingHero = ({ image, heading, subheading, blurb }) => {
 			<div className='relative z-20 flex flex-col items-center justify-center h-full text-center text-light px-4 max-w-5xl mx-auto'>
 				<h1 className='text-4xl md:text-6xl font-black pb-2'>{heading}</h1>
 				<DelayAppear>
-					<p className='pt-2 text-xl md:text-3xl font-bold text-secondary border-t border-primary'>
+					<p className='pt-2 text-xl md:text-3xl font-bold text-secondary border-t border-secondary'>
 						{subheading}
 					</p>
 					<Link href='/contact-us'>
