@@ -108,11 +108,11 @@ const ServiceCard = ({ service }) => {
 
 				{/* Service Name */}
 				<div
-					className={`absolute bottom-0 left-0 right-0 px-2 py-4 text-center bg-light/80 ${
-						isHovered ? 'opacity-80' : 'opacity-100'
+					className={`absolute bottom-0 left-0 right-0 px-2 py-4 text-center ${
+						isHovered ? 'opacity bg-dark' : 'opacity-100 bg-light/80 '
 					}`}
 				>
-					<ParagraphLarge text={service.title} type='primary' />
+					<SubHeading text={service.title} type={isHovered ? 'secondary' : 'primary'} />
 				</div>
 			</div>
 		</AnimateUp>
@@ -159,8 +159,7 @@ const HoverContent = ({ service }) => (
 						<h3 className='font-bold text-lg'>{sub.subTitle}</h3>
 					</motion.div>
 				))}
-				{/* Add "and more" after listing all subcategories */}
-				<div className='mt-2 font-bold text-lg'>and more</div>
+				
 			</div>
 		)}
 	</div>
