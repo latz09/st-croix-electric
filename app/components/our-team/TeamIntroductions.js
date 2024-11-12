@@ -42,7 +42,7 @@ const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 				alt={name}
 				width={300}
 				height={300}
-				className='lg:w-1/3 lg:p-2 shadow-xl lg:rounded-sm bg-dark/80'
+				className='lg:w-1/3 lg:p-2 shadow-xl lg:rounded-sm lg:bg-gradient-to-r from-dark/80 via-dark/80 to-dark/70'
                 priority
 			/>
 

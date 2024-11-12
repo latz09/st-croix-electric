@@ -6,7 +6,7 @@ import { FaRegHandPointer } from 'react-icons/fa';
 import AnimateUp from '../utils/animations/AnimateUp';
 import { motion } from 'framer-motion';
 import logoImage from '@/public/images/st-croix-electric.jpg';
-import { SubHeading } from '../utils/typography/Typography';
+import { ParagraphLarge, SubHeading } from '../utils/typography/Typography';
 import { PrimaryButtonLink } from '../utils/buttons/Buttons';
 import Link from 'next/link';
 
@@ -20,7 +20,7 @@ const ServiceCards = ({ data }) => {
 			<div className='relative overflow-hidden'>
 				<BackgroundImage />
 
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-8 gap-x-4'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-16 gap-x-16'>
 					{data.servicesList.map((service, index) => (
 						<div
 							key={index}
@@ -84,7 +84,7 @@ const ServiceCard = ({ service }) => {
 	return (
 		<AnimateUp>
 			<div
-				className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer transition duration-700 h-80'
+				className='relative group overflow-hidden lg:rounded-sm shadow-lg shadow-primary/30 cursor-pointer transition duration-700 h-96 '
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
 				onClick={() => setIsHovered(!isHovered)}
@@ -99,7 +99,7 @@ const ServiceCard = ({ service }) => {
 						width={600}
 					/>
 					{/* React Icon on hover */}
-					<div className='absolute top-4 right-4 text-secondary text-3xl opacity-80'>
+					<div className='absolute top-4 right-4 text-light text-3xl opacity-80'>
 						<FaRegHandPointer />
 					</div>
 					{/* Hover Content */}
@@ -108,11 +108,11 @@ const ServiceCard = ({ service }) => {
 
 				{/* Service Name */}
 				<div
-					className={`absolute bottom-0 left-0 right-0 px-2 py-4 text-center bg-dark/90 ${
-						isHovered ? 'opacity-30' : 'opacity-100'
+					className={`absolute bottom-0 left-0 right-0 px-2 py-4 text-center bg-light/80 ${
+						isHovered ? 'opacity-80' : 'opacity-100'
 					}`}
 				>
-					<SubHeading text={service.title} type='secondary' />
+					<ParagraphLarge text={service.title} type='primary' />
 				</div>
 			</div>
 		</AnimateUp>
@@ -120,7 +120,7 @@ const ServiceCard = ({ service }) => {
 };
 
 const HoverContent = ({ service }) => (
-	<div className='absolute inset-0 bg-dark/80 text-light backdrop-blur-sm flex flex-col gap-2 p-4 h-full overflow-y-auto'>
+	<div className='absolute inset-0 bg-light/80 text-dark  flex flex-col gap-2 p-4 h-full overflow-y-auto'>
 		{/* Service Description */}
 		{service.description && (
 			<div className='lg:text-lg font-bold'>
@@ -142,9 +142,9 @@ const HoverContent = ({ service }) => (
 			<div className='mt-2'>
 				<div className='mt-auto grid place-items-center mb-4'>
 					<Link href={`/what-we-do#${service.pageId}`}>
-						<div className='flex items-center gap-4'>
-							<SubHeading text='Learn More' type='secondary' />
-							<FaArrowRight className='text-secondary text-2xl' />
+						<div className='flex items-center gap-4 group'>
+							<SubHeading text='Learn More' type='primary' />
+							<FaArrowRight className='text-primary text-2xl ' />
 						</div>
 					</Link>
 				</div>

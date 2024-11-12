@@ -14,24 +14,27 @@ export default async function Home() {
 
 	return (
 		<PageContainer>
-			<LandingHero
-				image={data.landingHero.imageUrl}
-				heading={data.landingHero.heading}
-				subheading={data.landingHero.subheading}
-				blurb={data.landingHero.blurb}
-			/>
-			<AnimateUp>
-				<HomePageIntro
-					heading={data.intro.heading}
-					intro={data.intro.introParagraph}
-					image={data.intro.introImageUrl}
+			<div className='grid gap-16'>
+				<LandingHero
+					image={data.landingHero.imageUrl}
+					heading={data.landingHero.heading}
+					subheading={data.landingHero.subheading}
+					blurb={data.landingHero.blurb}
 				/>
-			</AnimateUp>
-			{/* <ServiceCards data={data.services} /> */}
-			<ServiceCardsContainer />
-			<FeaturedTestimonials  />
-			<div className="border bg-[#191717]">
-			<MeetOurTeam data={data.meetOurTeam} /></div>
+				<AnimateUp>
+					<HomePageIntro
+						heading={data.intro.heading}
+						intro={data.intro.introParagraph}
+						image={data.intro.introImageUrl}
+					/>
+				</AnimateUp>
+				{/* <ServiceCards data={data.services} /> */}
+				<ServiceCardsContainer />
+				<FeaturedTestimonials />
+				<div className='border bg-[#191717]'>
+					<MeetOurTeam data={data.meetOurTeam} />
+				</div>
+			</div>
 		</PageContainer>
 	);
 }

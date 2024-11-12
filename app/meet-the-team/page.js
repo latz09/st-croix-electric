@@ -6,6 +6,7 @@ import {
 	SubHeading,
 } from '../components/utils/typography/Typography';
 import TeamIntroductions from '../components/our-team/TeamIntroductions';
+import PageContainer from '../components/utils/animations/PageContainer';
 export const metadata = {
 	title: 'Meet the Team',
 	description: 'Meet the team at St. Croix Electric',
@@ -13,16 +14,18 @@ export const metadata = {
 
 const MeetTheTeamPage = async () => {
 	const [data] = await fetchContent(query);
-	
+
 	return (
-		<div className='space-y-8 lg:space-y-16 bg-gradient-to-b from-light via-primary/10 to-light'>
-			<div className='text-center bg-dark py-8  '>
-				<Heading text={data.heading} type='text-secondary' />
+		<PageContainer>
+			<div className='space-y-8 lg:space-y-16 bg-gradient-to-b from-light via-primary/10 to-light'>
+				<div className='text-center bg-dark py-8  '>
+					<Heading text={data.heading} type='text-secondary' />
+				</div>
+				<div className='max-w-7xl mx-auto'>
+					<TeamIntroductions data={data.teamMembers} />
+				</div>
 			</div>
-			<div className='max-w-7xl mx-auto'>
-				<TeamIntroductions data={data.teamMembers} />
-			</div>
-		</div>
+		</PageContainer>
 	);
 };
 
