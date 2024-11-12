@@ -31,7 +31,7 @@ const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 			}`}
 		>
 			{/* Name and Role for Small Screens */}
-			<div className='lg:hidden grid place-items-center pb-4'>
+			<div className='lg:hidden grid place-items-center pb-4 text-center'>
 				<Heading text={name} type='primary' />
 				<SubHeading text={role} type='primary' />
 			</div>
