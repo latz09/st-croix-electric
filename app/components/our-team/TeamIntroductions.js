@@ -49,7 +49,7 @@ const TeamMember = ({ name, role, image, description, reverseLayout }) => {
 			{/* Team Member Details */}
 			<div className=''>
 				{/* Name and Role for Large Screens */}
-				<div className='hidden lg:grid gap-2 pb-4'>
+				<div className='hidden lg:grid gap-2 pb-4 text-center'>
 					<Heading text={name} type='primary' />
 					<SubHeading text={role} type='primary' />
 				</div>
