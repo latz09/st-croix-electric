@@ -5,7 +5,7 @@ import FadeIn from '../utils/animations/FadeIn';
 
 const TeamIntroductions = ({ data }) => {
 	return (
-		<div className='grid place-items-center gap-24 '>
+		<div className='grid place-items-center gap-24 px-2 '>
 			{data.map((member, index) => (
 				<AnimateUp key={index}>
 					<TeamMember
