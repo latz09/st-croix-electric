@@ -11,7 +11,7 @@ const ServicePageLayout = ({ data }) => {
 				data.servicesList.map((service, index) => (
 					<div
 						id={`${service.pageId}`}
-						className='scroll-mt-6 lg:border-t-2 border-dark/10'
+						className='scroll-mt-36 lg:border-t-2 border-dark/10'
 						key={index}
 					>
 						<motion.div
