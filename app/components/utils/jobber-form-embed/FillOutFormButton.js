@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 const FillOutFormButton = ({ title, className }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -60,12 +60,12 @@ const FillOutFormButton = ({ title, className }) => {
 			{/* Modal */}
 			{isOpen && (
 				<div className='fixed inset-0 bg-dark/50 backdrop-blur flex items-center justify-center z-50'>
-					<div className='bg-light rounded-sm relative w-screen max-w-2xl max-h-[90%] overflow-y-auto scrollbar-hide'>
+					<div className='bg-light rounded-sm relative w-screen max-w-2xl max-h-[100%] lg:max-h-[90%] overflow-y-auto scrollbar-hide'>
 						{/* Close Button */}
 						<motion.button
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.9, delay: 0.9 }}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.9, delay: 0.9 }}
 							onClick={() => setIsOpen(false)}
 							className='sticky top-0 bg-primary py-4 shadow-lg w-full'
 						>
