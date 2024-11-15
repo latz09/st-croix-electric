@@ -60,7 +60,7 @@ const FillOutFormButton = ({ title, className }) => {
 			{/* Modal */}
 			{isOpen && (
 				<div className='fixed inset-0 bg-dark/50 backdrop-blur flex items-center justify-center z-50'>
-					<div className='bg-light rounded-sm relative w-screen max-w-2xl max-h-[100%] lg:max-h-[90%] overflow-y-auto scrollbar-hide'>
+					<div className='bg-light rounded-sm relative w-screen max-w-2xl max-h-[95%] lg:max-h-[90%] overflow-y-auto scrollbar-hide'>
 						{/* Close Button */}
 						<motion.button
 							initial={{ opacity: 0 }}
