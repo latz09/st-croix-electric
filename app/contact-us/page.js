@@ -9,6 +9,7 @@ import {
 import { FiPhone, FiMail } from 'react-icons/fi';
 import AnimateUp from '../components/utils/animations/AnimateUp';
 import PageContainer from '../components/utils/animations/PageContainer';
+import FillOutFormButton from '../components/utils/jobber-form-embed/FillOutFormButton';
 
 export const metadata = {
 	title: 'Contact Us',
@@ -28,9 +29,7 @@ const ContactUsPage = async () => {
 						text="Request a Free Estimate. All estimates are complimentary and tailored to your materials and scheduling needs. Fill out the form below, and we'll follow up within 48 hours."
 						type='primary'
 					/>
-					<button className='border border-primary  lg:text-xl text-primary font-bold px-6 py-3 rounded-sm transition duration-300 mt-8'>
-						Fill Out Form
-					</button>
+					<FillOutFormButton title='Fill Out Form' className="mt-8 px-12 py-2 rounded-full text-xl font-bold" />
 				</div>
 				<AnimateUp>
 					<div className='mt-24 grid place-items-center'>
@@ -59,6 +58,7 @@ const ContactUsPage = async () => {
 						</div>
 					</div>
 				</AnimateUp>
+				
 			</div>
 		</PageContainer>
 	);
