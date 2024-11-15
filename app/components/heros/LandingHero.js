@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const LandingHero = ({ image, heading, subheading, blurb }) => {
 	return (
-		<div className='relative h-[60vh]'>
+		<div className='relative h-[70vh]'>
 			{/* Fullscreen background image */}
 			<div className='absolute inset-0 '>
 				<Image
@@ -20,7 +20,7 @@ const LandingHero = ({ image, heading, subheading, blurb }) => {
 			<div className='absolute inset-0 bg-dark/70 '></div>
 
 			{/* Heading and Subheading */}
-			<div className='relative z-20 flex flex-col items-center justify-center h-full text-center text-light px-4 max-w-5xl mx-auto'>
+			<div className='relative z-20 flex flex-col items-center justify-center h-full text-center text-light px-2 max-w-5xl mx-auto'>
 				<h1 className='text-3xl md:text-5xl font-black pb-2'>{heading}</h1>
 				<DelayAppear>
 					<p className='pt-2 text-lg md:text-2xl font-bold text-secondary border-t border-secondary'>
