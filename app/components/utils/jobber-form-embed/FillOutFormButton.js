@@ -59,7 +59,7 @@ const FillOutFormButton = ({ title, className }) => {
 
 			{/* Modal */}
 			{isOpen && (
-				<div className='fixed inset-0 bg-dark/50 backdrop-blur flex items-center justify-center z-50'>
+				<div className='fixed inset-0 bg-dark/50 backdrop-blur-sm flex items-center justify-center z-50'>
 					<div className='bg-light rounded-sm relative w-screen max-w-2xl max-h-[95%] lg:max-h-[90%] overflow-y-auto scrollbar-hide'>
 						{/* Close Button */}
 						<motion.button
@@ -78,7 +78,7 @@ const FillOutFormButton = ({ title, className }) => {
 
 						<div
 							id='865b975f-b671-4d76-ae80-2510533643a8'
-							className='scrollbar-hide'
+							className='scrollbar-hide '
 						></div>
 					</div>
 				</div>

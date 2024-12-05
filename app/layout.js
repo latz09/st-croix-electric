@@ -1,6 +1,7 @@
 import Footer from './components/navigation/Footer';
 import NavigationContainer from './components/navigation/NavigationContainer';
 import RequestQuoteNow from './components/utils/modals/RequestQuoteNow';
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css';
 
 import { Montserrat } from 'next/font/google';
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
 				<RequestQuoteNow />
 				{children}
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);
