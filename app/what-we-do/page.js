@@ -1,5 +1,4 @@
-import { fetchContent } from '@/utils/cms/fetchContent';
-import { FETCH_WHAT_WE_DO_PAGE_DATA as query } from '@/data/queries/pages/FETCH_WHAT_WE_DO_PAGE_DATA';
+import { services as data } from '@/data/services';
 import ServicePageLayout from '../components/services/ServicePageLayout';
 import ServicesNavigation from '../components/services/ServicesNavigation';
 import PageContainer from '../components/utils/animations/PageContainer';
@@ -9,10 +8,8 @@ export const metadata = {
 	description: 'What We Do',
 };
 
-const WhatWeDoPage = async () => {
-	const [data] = await fetchContent(query);
-
-	const serviceNavigationData = data?.servicesList.map((service) => ({
+const WhatWeDoPage = () => {
+	const serviceNavigationData = data.servicesList.map((service) => ({
 		title: service.title,
 		pageId: service.pageId,
 	}));
@@ -32,5 +29,3 @@ const WhatWeDoPage = async () => {
 };
 
 export default WhatWeDoPage;
-
-export const revalidate = 10;

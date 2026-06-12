@@ -1,5 +1,4 @@
-import { fetchContent } from '@/utils/cms/fetchContent';
-import { FETCH_CONTACT_US_PAGE_DATA as query } from '@/data/queries/pages/FETCH_CONTACT_US_PAGE_DATA';
+
 import {
 	Heading,
 	Paragraph,
@@ -17,12 +16,12 @@ export const metadata = {
 };
 
 const ContactUsPage = async () => {
-	const [data] = await fetchContent(query);
+	
 
 	return (
 		<PageContainer>
 			<div className='max-w-7xl  mx-auto px-2 lg:px-4 py-12 grid place-items-center'>
-				<Heading type='primary' text={data.title} />
+				<Heading type='primary' text='Request a Quote Now' />
 
 				<div className='mt-12 border border-dark/20 p-4 lg:p-8 rounded-sm shadow-md lg:w-3/4 mx-auto grid place-items-center text-center'>
 					<Paragraph
@@ -33,25 +32,25 @@ const ContactUsPage = async () => {
 				</div>
 				<AnimateUp>
 					<div className='mt-24 grid place-items-center'>
-						<SubHeading type='primary' text={data.subTitle} />
+						<SubHeading type='primary' text='Reach Out Directly' />
 						<div>
 							<div className='mt-4 space-y-4 grid place-items-center'>
 								<a
-									href={`tel:${data.phoneNumber}`}
+									href={`tel:+6124309156`}
 									className='flex items-center hover:underline'
 								>
 									<FiPhone className='h-6 w-6 text-dark mr-3' />
 									<span className='text-lg text-dark/80 hover:text-dark'>
-										{data.phoneNumber}
+										(612) 430-9156
 									</span>
 								</a>
 								<a
-									href={`mailto:${data.email}`}
+									href={`mailto:stcroixelectricinc@gmail.com`}
 									className='flex items-center hover:underline mt-4'
 								>
 									<FiMail className='h-6 w-6 text-dark mr-3' />
 									<span className='text-lg text-dark/80 hover:text-dark'>
-										{data.email}
+										stcroixelectricinc@gmail.com
 									</span>
 								</a>
 							</div>

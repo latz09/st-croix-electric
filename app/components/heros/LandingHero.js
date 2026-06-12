@@ -2,7 +2,7 @@ import Image from 'next/image';
 import DelayAppear from '../utils/animations/DelayAppear';
 import Link from 'next/link';
 
-const LandingHero = ({ image, heading, subheading, blurb }) => {
+const LandingHero = ({ image, heading, subheading}) => {
 	return (
 		<div className='relative h-[70vh]'>
 			{/* Fullscreen background image */}

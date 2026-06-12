@@ -4,28 +4,18 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import AnimateUp from '../utils/animations/AnimateUp'; // Custom animation component
+import AnimateUp from '../utils/animations/AnimateUp';
 
 const ImageGallery = ({ data }) => {
 	const [selectedImage, setSelectedImage] = useState(null);
 
-	// Preload images when the component mounts
-	useEffect(() => {
-		data.forEach((image) => {
-			const img = new window.Image();
-			img.src = image.imageUrl;
-		});
-	}, [data]);
-
 	// Disable scrolling when modal is open
 	useEffect(() => {
 		if (selectedImage) {
-			document.body.style.overflow = 'hidden'; // Disable scroll
+			document.body.style.overflow = 'hidden';
 		} else {
-			document.body.style.overflow = 'auto'; // Enable scroll
+			document.body.style.overflow = 'auto';
 		}
-
-		// Cleanup function to reset scrolling when component unmounts
 		return () => {
 			document.body.style.overflow = 'auto';
 		};
@@ -42,18 +32,15 @@ const ImageGallery = ({ data }) => {
 					{data.map((image, index) => (
 						<div
 							key={index}
-							className='relative w-full h-64 md:h-80 overflow-hiddn cursor-pointer'
+							className='relative w-full h-64 md:h-80 overflow-hidden cursor-pointer'
 							onClick={() => setSelectedImage(image)}
 						>
 							<Image
 								src={image.imageUrl}
 								alt={image.alt || 'Gallery Image'}
 								fill
-								quality={100}
 								className='object-cover shadow-lg hover:scale-95 hover:shadow-secondary/30 transition duration-300'
-								sizes='(max-width: 768px) 100vw,
-                       (max-width: 1200px) 50vw,
-                       33vw'
+								sizes='(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw'
 							/>
 						</div>
 					))}
@@ -77,17 +64,16 @@ const ImageGallery = ({ data }) => {
 								animate={{ scale: 1, opacity: 1 }}
 								exit={{ scale: 0.8, opacity: 0 }}
 								transition={{ duration: 0.3 }}
-								onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+								onClick={(e) => e.stopPropagation()}
 							>
 								<Image
 									src={selectedImage.imageUrl}
 									alt={selectedImage.alt || 'Full-size Image'}
 									fill
-									quality={100}
+									quality={90}
 									className='object-contain '
-									style={{ maxHeight: '100%', maxWidth: '100%' }}
+									sizes='100vw'
 								/>
-								{/* Close Button */}
 								<button
 									className='absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full '
 									onClick={closeModal}

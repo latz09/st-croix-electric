@@ -1,28 +1,25 @@
-import { fetchContent } from '@/utils/cms/fetchContent';
-import { FETCH_FEATURED_TESTIMONIALS as query } from '@/data/queries/testimonials/FETCH_FEATURED_TESTIMONIALS';
+import { testimonials } from '@/data/testimonials';
 import AnimateUp from '../utils/animations/AnimateUp';
 import { PrimaryButtonLink } from '../utils/buttons/Buttons';
 import { Heading, Paragraph, SubHeading } from '../utils/typography/Typography';
 
-const FeaturedTestimonials = async () => {
-	const [data] = await fetchContent(query);
-	
+const FeaturedTestimonials = () => {
+	const featured = testimonials.testimonialsList.filter((t) => t.isFeatured);
+
 	return (
 		<div className='max-w-7xl mx-auto py-12 px-4'>
 			{/* Heading and Intro */}
 			<div className='text-center space-y-4 max-w-5xl mx-auto'>
-				<Heading type='primary' text={data.heading} />
-
-				<Paragraph text={data.intro} type='primary' />
+				<Heading type='primary' text={testimonials.heading} />
+				<Paragraph text={testimonials.intro} type='primary' />
 			</div>
 
 			{/* Testimonials Grid */}
 			<div className='grid grid-cols-1  md:grid-cols-3 gap-8 mt-16 '>
-				{data.testimonialsList.map((testimonial, index) => (
+				{featured.map((testimonial, index) => (
 					<AnimateUp key={index}>
 						<div className='bg-dark  shadow-lg shadow-primary/30 rounded-sm p-6 text-light flex flex-col justify-between gap-4'>
 							<Paragraph text={testimonial.content} />
-
 							<SubHeading text={testimonial.firstName} type='secondary' />
 						</div>
 					</AnimateUp>
@@ -41,5 +38,3 @@ const FeaturedTestimonials = async () => {
 };
 
 export default FeaturedTestimonials;
-
-export const revalidate = 10;

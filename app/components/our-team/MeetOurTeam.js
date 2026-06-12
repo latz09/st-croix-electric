@@ -1,5 +1,4 @@
-import { fetchContent } from '@/utils/cms/fetchContent';
-import { FETCH_WHO_WE_ARE_CARD_DATA as query } from '@/data/queries/who-we-are-card/FETCH_WHO_WE_ARE_CARD_DATA';
+
 import Image from 'next/image';
 
 import {
@@ -10,7 +9,8 @@ import {
 import { SecondaryButtonLink } from '../utils/buttons/Buttons';
 
 const MeetOurTeam = async () => {
-	const [data] = await fetchContent(query);
+	
+	
 	
 	return (
 		<div className='relative w-full'>
@@ -18,7 +18,7 @@ const MeetOurTeam = async () => {
 
 			<div className='relative w-full h-[70vh] max-w-5xl mx-auto '>
 				<Image
-					src={data.whoWeAreCard.image.asset.url}
+					src='/images/content/meet-the-team.jpg'
 					alt='Team Image'
 					fill
 					sizes='100vw'
@@ -32,11 +32,11 @@ const MeetOurTeam = async () => {
 				<div className='absolute inset-0 '>
 					<div className=' gap-8 h-full group cursor-pointer '>
 						<div className=' text-light flex flex-col justify-between h-full px-6  lg:px-12 py-6'>
-							<Heading type='secondary' text={data.heading} />
+							<Heading type='secondary' text='Meet The Team' />
 
 							<div className='grid gap-6 '>
 								<div className='lg:group-hover:text-secondary'>
-									<ParagraphLarge text={data.whoWeAreCard.teamParagraph} type='secondary' />
+									<ParagraphLarge text='At St. Croix Electric, we combine generations of expertise with modern techniques, delivering exceptional, personalized service as a family-owned business.' type='secondary' />
 								</div>
 
 								<div className='place-self-center lg:place-self-end '>
