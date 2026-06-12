@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# St. Croix Electric Website
 
-## Getting Started
+The official website for St. Croix Electric Inc. Built with Next.js and hosted on Vercel.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 13+ (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Hosting:** Vercel
+- **Language:** JavaScript
+
+## Project Structure
+
+    app/                  → Pages and route components (Next.js App Router)
+      components/         → Reusable React components
+      contact-us/         → /contact-us page
+      meet-the-team/      → /meet-the-team page
+      see-our-work/       → /see-our-work page
+      what-we-do/         → /what-we-do page
+      why-choose-us/      → /why-choose-us page
+    data/                 → Site content (text, team info, services, testimonials)
+    public/               → Static assets (images, favicon, etc.)
+      images/content/     → All site images
+
+## Editing Content
+
+All site content lives in the `/data` folder as plain JavaScript files, or directly inside each page file in `/app`. To update text, team members, services, testimonials, etc., open the relevant file and edit directly.
+
+- `data/services.js` — Service categories, descriptions, and subcategories
+- `data/testimonials.js` — All customer testimonials (mark `isFeatured: true` to show on homepage)
+- Page-specific content (home page, contact, see our work, etc.) lives inside the corresponding `page.js` file in `/app`
+
+After editing, commit and push — Vercel will redeploy automatically.
+
+## Images
+
+To add or update images, drop them into `public/images/content/` and reference them in the data files using a path like `/images/content/your-image.jpg`.
+
+For best performance, compress and resize images before adding them (recommended: max 1600px wide, WebP or optimized JPG).
+
+## Running Locally
+
+Requires Node.js 18+.
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser. The site will auto-reload as you edit files.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The site is deployed on Vercel. Pushes to the `main` branch trigger an automatic production deploy. Pushes to other branches generate preview URLs.
 
-## Learn More
+The Vercel project is owned by St. Croix Electric Inc.
 
-To learn more about Next.js, take a look at the following resources:
+## Domain & Hosting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Domain:** stcroixelectricinc.com
+- **Hosting:** Vercel (account owned by St. Croix Electric)
+- **DNS:** Configured to point at Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Original Build
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Originally built by Latz Web Design, LLC. Full ownership of all code, design, content, and assets was transferred to St. Croix Electric Inc. 
